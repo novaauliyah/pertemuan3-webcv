@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Nofa Auliyatul Maulidiyyah</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		<title>Student Activity DEP Pertemuan 3</title>
+		<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='/style.css') }}>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	</head>
@@ -23,7 +24,7 @@
 		<!-- bagian header -->
 		<header>
 			<div class="container">
-				<h1><a href="">Nofa</a></h1>
+				<h1><a href="">Nofa Auliyatul Maulidiyyah</a></h1>
 				<ul>
 					<li><a href="#about">About</a></li>
 					<li><a href="#skills">Skills</a></li>
@@ -39,7 +40,7 @@
 		<section class="banner">
 			<div class="container">
 				<div class="banner-left">
-					<img src="img/nofa.jpeg">
+					<img src={{ url_for('static', filename='/nofa.jpeg') }}>
 					<h2>Hai...<br>
 						Saya adalah seorang <span class="efek-ngetik"></span></h2>
 					<p>Selamat datang di website CV saya!</p>
@@ -108,7 +109,7 @@
 				<small>Copyright &copy; 2020 - Nova Auliyah</small>
 			</div>
 		</footer>
-
-		<script src="js/script.js"></script>
+		{{ url_for('static', filename='/script.js') }}
+		<script src={{ url_for('static', filename='/script.js') }}></script>
 	</body>
 </html>
